@@ -55,3 +55,4 @@ $route['translate_uri_dashes'] = FALSE;
 
 $route['admin/dashboard'] = 'Member/index';
 $route['admin/produk'] = 'Produk/index';
+$route['admin/setting'] = 'Setting/index';
