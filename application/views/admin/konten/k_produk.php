@@ -12,7 +12,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 				</div>
 				<div class="col-sm-6">
 					<ol class="breadcrumb float-sm-right">
-						<li class="breadcrumb-item"><a href="<?= base_url('admin/dashboard') ?>">Home</a></li>
+						<li class="breadcrumb-item"><a href="<?= base_url('index.php/admin/dashboard') ?>">Home</a></li>
 						<li class="breadcrumb-item active">Daftar Produk</li>
 					</ol>
 				</div>
