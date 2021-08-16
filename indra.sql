@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 16, 2021 at 08:27 AM
+-- Generation Time: Aug 16, 2021 at 08:42 AM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.3.9
 
@@ -176,7 +176,7 @@ INSERT INTO `stok` (`id_stok`, `id_produk`, `id_merk`, `id_size`, `type`, `harga
 ('st27', 'P03', 'm06', 'si08', '24D123', 1700000, 14),
 ('st28', 'P03', 'm07', 'si09', '24LE1701', 1500000, 12),
 ('st29', 'P03', 'm08', 'si10', '32D1852', 2100000, 17),
-('st30', 'P03', 'm07', '', 'C32BA11', 2000000, 19),
+('st30', 'p03', 'm07', 'si10', 'C32BA11', 2000000, 19),
 ('st31', 'p04', 'm09', 'si11', 'QW781XT', 1300000, 12),
 ('st32', 'p04', 'm09', 'si12', '851XT', 1400000, 12),
 ('st33', 'p04', 'm06', 'si11', '7363', 1300000, 18),
@@ -223,7 +223,20 @@ ALTER TABLE `size`
 ALTER TABLE `stok`
   ADD PRIMARY KEY (`id_stok`),
   ADD KEY `id_produk` (`id_produk`),
-  ADD KEY `id_merk` (`id_merk`);
+  ADD KEY `id_merk` (`id_merk`),
+  ADD KEY `id_size` (`id_size`);
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `stok`
+--
+ALTER TABLE `stok`
+  ADD CONSTRAINT `stok_ibfk_1` FOREIGN KEY (`id_produk`) REFERENCES `produk` (`id_produk`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `stok_ibfk_2` FOREIGN KEY (`id_merk`) REFERENCES `merk` (`id_merk`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `stok_ibfk_3` FOREIGN KEY (`id_size`) REFERENCES `size` (`id_size`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
