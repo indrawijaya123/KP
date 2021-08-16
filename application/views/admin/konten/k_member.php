@@ -33,7 +33,7 @@ defined('BASEPATH') or exit('No direct script access allowed');?>
 			</div>
 			<!-- /.card-body -->
 			<div class="card-footer">
-				<small>Versi 1.0.0 <i>created with love</i></small>
+				<small>Versi 1.0.0 <i>created by Indra Wijaya (1811010005)</i></small>
 			</div>
 			<!-- /.card-footer-->
 		</div>
