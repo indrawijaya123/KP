@@ -24,11 +24,12 @@ defined('BASEPATH') or exit('No direct script access allowed');?>
 		<!-- Default box -->
 		<div class="card card-dark">
 			<div class="card-header">
-				<h3 class="card-title">TKJLEarning Administrator</h3>
+				<h3 class="card-title">Panduan Administrator</h3>
 
 			</div>
 			<div class="card-body">
-
+				<img src="<?= base_url('assets/gambartoko.jpg'); ?>" width="700" height="320">
+				<P>Terimakasih sudah masuk kedalam Sistem Informasi Elektronik Toko Anugerah. Untuk mendapatkan dan mengupdate informasi terkait stok produk, silahkan Klik menu "stok produk"</P>
 			</div>
 			<!-- /.card-body -->
 			<div class="card-footer">
