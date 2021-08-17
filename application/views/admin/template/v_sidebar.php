@@ -42,13 +42,20 @@ defined('BASEPATH') or exit('No direct script access allowed');?>
 							Stok Produk
 						</p>
 					</a>
+				<li class="nav-item">
+					<a href="<?= base_url('index.php/admin/merk'); ?>" class="nav-link <?= ($menu == 'merk')?"active":""; ?>">
+						<i class="fa-solid fa-copyright"></i>
+						<p>
+							Merk
+						</p>
+					</a>
 				</li>
 
 				<li class="nav-item">
-					<a href="<?= base_url('index.php/admin/setting'); ?>" class="nav-link">
-						<i class="nav-icon fas fa-cog"></i>
+					<a href="<?= base_url('index.php/admin/setting'); ?>" class="nav-link <?= ($menu == 'tentang kami')?"active":""; ?>">
+						<i class="fas fa-address-card"></i>
 						<p>
-							Setting
+							Tentang Kami
 						</p>
 					</a>
 				</li>

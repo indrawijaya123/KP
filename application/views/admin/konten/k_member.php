@@ -29,7 +29,13 @@ defined('BASEPATH') or exit('No direct script access allowed');?>
 			</div>
 			<div class="card-body">
 				<img src="<?= base_url('assets/gambartoko.jpg'); ?>" width="700" height="320">
-				<P>Terimakasih sudah masuk kedalam Sistem Informasi Elektronik Toko Anugerah. Untuk mendapatkan dan mengupdate informasi terkait stok produk, silahkan Klik menu "stok produk"</P>
+				<h3 align="center"><b>Panduan Menggunakan Sistem Informasi Elektronik Toko Anugerah</b></h3>
+				<p>Untuk mendapatkan dan mengupdate informasi terkait Stok produk, silahkan Klik menu "Stok produk"</p>
+				<P>Untuk mendapatkan dan mengupdate informasi terkait Merk produk, silahkan Klik menu "Merk produk"</P>
+				<P>Untuk mendapatkan dan mengupdate informasi terkait Size produk, silahkan Klik menu "Size produk"</P>
+				<P>Untuk mendapatkan dan mengupdate informasi terkait Harga produk, silahkan Klik menu "Harga produk"</P>
+				<P>Untuk mendapatkan dan mengupdate informasi terkait Type produk, silahkan Klik menu "Type produk"</P>
+				<p>Untuk mendapatkan dan mengupdate informasi terkait Jenis produk, silahkan Klik menu "Jenis produk"</p>
 			</div>
 			<!-- /.card-body -->
 			<div class="card-footer">
