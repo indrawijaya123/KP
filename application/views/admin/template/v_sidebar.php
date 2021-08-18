@@ -42,6 +42,7 @@ defined('BASEPATH') or exit('No direct script access allowed');?>
 							Stok Produk
 						</p>
 					</a>
+				</li>
 				<li class="nav-item">
 					<a href="<?= base_url('index.php/admin/merk'); ?>" class="nav-link <?= ($menu == 'merk')?"active":""; ?>">
 						<i class="fa-solid fa-copyright"></i>
@@ -50,7 +51,38 @@ defined('BASEPATH') or exit('No direct script access allowed');?>
 						</p>
 					</a>
 				</li>
-
+				<li class="nav-item">
+					<a href="<?= base_url('index.php/admin/jenis'); ?>" class="nav-link <?= ($menu == 'jenis')?"active":""; ?>">
+						<i class="fa-solid fa-copyright"></i>
+						<p>
+							jenis
+						</p>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a href="<?= base_url('index.php/admin/size'); ?>" class="nav-link <?= ($menu == 'size')?"active":""; ?>">
+						<i class="fa-solid fa-copyright"></i>
+						<p>
+							size
+						</p>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a href="<?= base_url('index.php/admin/type'); ?>" class="nav-link <?= ($menu == 'type')?"active":""; ?>">
+						<i class="fa-solid fa-copyright"></i>
+						<p>
+							type
+						</p>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a href="<?= base_url('index.php/admin/harga'); ?>" class="nav-link <?= ($menu == 'harga')?"active":""; ?>">
+						<i class="fa-solid fa-copyright"></i>
+						<p>
+							Harga
+						</p>
+					</a>
+				</li>
 				<li class="nav-item">
 					<a href="<?= base_url('index.php/admin/setting'); ?>" class="nav-link <?= ($menu == 'tentang kami')?"active":""; ?>">
 						<i class="fas fa-address-card"></i>

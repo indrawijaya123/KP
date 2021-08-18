@@ -57,3 +57,7 @@ $route['admin/dashboard'] = 'Member/index';
 $route['admin/produk'] = 'Produk/index';
 $route['admin/setting'] = 'Setting/index';
 $route['admin/merk'] = 'Merk/index';
+$route['admin/jenis'] = 'Jenis/index';
+$route['admin/size'] = 'Size/index';
+$route['admin/type'] = 'Type/index';
+$route['admin/harga'] = 'Harga/index';
