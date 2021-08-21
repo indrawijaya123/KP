@@ -47,7 +47,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
 								<thead>
 								<tr>
 									<th class="text-center">No</th>
-									<th class="text-center">Jenis</th>
+									<th class="text-center">Kode Produk</th>
+									<th class="text-center">Kategori</th>
 									<th class="text-center">Merk</th>
 									<th class="text-center">Size</th>
 									<th class="text-center">Harga</th>

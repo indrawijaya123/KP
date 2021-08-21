@@ -59,5 +59,3 @@ $route['admin/setting'] = 'Setting/index';
 $route['admin/merk'] = 'Merk/index';
 $route['admin/jenis'] = 'Jenis/index';
 $route['admin/size'] = 'Size/index';
-$route['admin/type'] = 'Type/index';
-$route['admin/harga'] = 'Harga/index';

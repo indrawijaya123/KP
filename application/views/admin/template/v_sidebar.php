@@ -39,13 +39,13 @@ defined('BASEPATH') or exit('No direct script access allowed');?>
 					<a href="<?= base_url('index.php/admin/produk'); ?>" class="nav-link <?= ($menu == 'produk')?"active":""; ?>">
 						<i class="nav-icon fas fa-th"></i>
 						<p>
-							Stok Produk
+							Produk
 						</p>
 					</a>
 				</li>
 				<li class="nav-item">
 					<a href="<?= base_url('index.php/admin/merk'); ?>" class="nav-link <?= ($menu == 'merk')?"active":""; ?>">
-						<i class="fa-solid fa-copyright"></i>
+						<i class="nav-icon fas fa-copyright"></i>
 						<p>
 							Merk
 						</p>
@@ -53,33 +53,17 @@ defined('BASEPATH') or exit('No direct script access allowed');?>
 				</li>
 				<li class="nav-item">
 					<a href="<?= base_url('index.php/admin/jenis'); ?>" class="nav-link <?= ($menu == 'jenis')?"active":""; ?>">
-						<i class="fa-solid fa-copyright"></i>
+						<i class="nav-icon fas fa-clipboard"></i>
 						<p>
-							jenis
+							Kategori
 						</p>
 					</a>
 				</li>
 				<li class="nav-item">
 					<a href="<?= base_url('index.php/admin/size'); ?>" class="nav-link <?= ($menu == 'size')?"active":""; ?>">
-						<i class="fa-solid fa-copyright"></i>
+						<i class="nav-icon fas fa-window-maximize"></i>
 						<p>
 							size
-						</p>
-					</a>
-				</li>
-				<li class="nav-item">
-					<a href="<?= base_url('index.php/admin/type'); ?>" class="nav-link <?= ($menu == 'type')?"active":""; ?>">
-						<i class="fa-solid fa-copyright"></i>
-						<p>
-							type
-						</p>
-					</a>
-				</li>
-				<li class="nav-item">
-					<a href="<?= base_url('index.php/admin/harga'); ?>" class="nav-link <?= ($menu == 'harga')?"active":""; ?>">
-						<i class="fa-solid fa-copyright"></i>
-						<p>
-							Harga
 						</p>
 					</a>
 				</li>

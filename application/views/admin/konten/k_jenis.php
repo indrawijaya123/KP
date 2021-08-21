@@ -13,7 +13,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 				<div class="col-sm-6">
 					<ol class="breadcrumb float-sm-right">
 						<li class="breadcrumb-item"><a href="<?= base_url('index.php/admin/dashboard') ?>">Home</a></li>
-						<li class="breadcrumb-item active">Jenis</li>
+						<li class="breadcrumb-item active">Kategori</li>
 					</ol>
 				</div>
 			</div>
@@ -47,11 +47,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 								<thead>
 								<tr>
 									<th class="text-center">No</th>
-									<th class="text-center">Jenis</th>
-									<th class="text-center">Merk</th>
-									<th class="text-center">Size</th>
-									<th class="text-center">Harga</th>
-									<th class="text-center">Stok</th>
+									<th class="text-center">Kategori</th>
 									<th class="text-center" width="10%">Action</th>
 								</tr>
 								</thead>
