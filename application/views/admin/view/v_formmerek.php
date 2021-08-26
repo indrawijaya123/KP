@@ -10,7 +10,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 	<!-- Site wrapper -->
 	<?php $this->load->view('admin/template/v_navbar') ?>
 	<?php $this->load->view('admin/template/v_sidebar') ?>
-	<?php $this->load->view('admin/konten/k_merk') ?>
+	<?php $this->load->view('admin/konten/k_formmerek') ?>
 	<?php $this->load->view('admin/template/v_footer') ?>
 </div>
 <!-- jQuery -->
@@ -21,23 +21,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
 <script src="<?= base_url('vendor/almasaeed2010/adminlte') ?>/dist/js/adminlte.min.js"></script>
 <!-- pace-progress -->
 <script src="<?= base_url('vendor/almasaeed2010/adminlte') ?>/plugins/pace-progress/pace.min.js"></script>
-<!-- DataTables -->
-<script src="<?= base_url('vendor/almasaeed2010/adminlte') ?>/plugins/datatables/jquery.dataTables.min.js"></script>
-<script src="<?= base_url('vendor/almasaeed2010/adminlte') ?>/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
-<script src="<?= base_url('vendor/almasaeed2010/adminlte') ?>/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
-<script src="<?= base_url('vendor/almasaeed2010/adminlte') ?>/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
-<script>
-	$(function () {
-		$("#tableMerek").DataTable({
-			"responsive": true,
-			"columns": [
-				{ "width": "10%" },
-				null,
-				{ "width": "15%" },
-			]
 
-		});
-	});
+<script>
 
 	$(window).bind("load", function() {
 		window.setTimeout(function() {
@@ -45,16 +30,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
 				$(this).remove();
 			});
 		}, 2000);
-	});
-	$(function () {
-		$('[data-toggle="tooltip"]').tooltip()
-	});
-
-	/** Saat tombol modal diklik */
-	$(document).on("click", "#tombolHapus", function () {
-		var id = $(this).data('id');
-		var newUrl = "<?= base_url('admin/merk/hapus/'); ?>" + id;
-		$("#urlHapus").attr('href', newUrl);
 	});
 </script>
 </body>
