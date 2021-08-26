@@ -58,7 +58,11 @@ $route['admin/dashboard'] = 'Member/index';
 $route['admin/produk'] = 'Produk/index';
 $route['admin/setting'] = 'Setting/index';
 
+$route['admin/jenis/add'] = 'Jenis/add';
+$route['admin/jenis/edit/(:num)'] = 'Jenis/edit/$1';
+$route['admin/jenis/hapus/(:num)'] = 'Jenis/hapus/$1';
 $route['admin/jenis'] = 'Jenis/index';
+
 $route['admin/size'] = 'Size/index';
 /** Route merek */
 $route['admin/merk/add'] = 'Merk/add';
