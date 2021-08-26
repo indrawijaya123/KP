@@ -57,7 +57,24 @@ defined('BASEPATH') or exit('No direct script access allowed');
 								</tr>
 								</thead>
 								<tbody>
-
+								<?php $no=1 ; ?>
+								<?php foreach($tabelProduk->result_array() as $row): ?>
+									<tr>
+										<td class="text-center"><?= $no++; ?></td>
+										<td><?= sanitasi($row['kode_produk']); ?></td>
+										<td><?= sanitasi($row['jenis']); ?></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td class="text-center">
+											<a href="<?= base_url('admin/merk/edit/'.sanitasi($row['id'])); ?>"><button class="btn btn-primary btn-small" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fas fa-edit"></i></button></a>
+											<span id="tombolHapus" data-toggle="modal" data-target="#modalHapus" data-id="<?= sanitasi($row['id']); ?>">
+												<button class="btn btn-danger btn-small" data-toggle="tooltip" data-placement="top" title="Hapus"><i class="fas fa-trash"></i></button>
+											</span>
+										</td>
+									</tr>
+								<?php endforeach; ?>
 								</tbody>
 							</table>
 						</div>
