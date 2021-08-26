@@ -43,7 +43,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 						</div>
 						<!-- /.card-header -->
 						<div class="card-body">
-							<table id="tableSiswa" class="table table-bordered table-hover" style="width: 100%">
+							<table id="tableMerek" class="table table-bordered table-hover" style="width: 100%">
 								<thead>
 								<tr>
 									<th class="text-center">No</th>
@@ -52,7 +52,20 @@ defined('BASEPATH') or exit('No direct script access allowed');
 								</tr>
 								</thead>
 								<tbody>
+								<?php $no=1 ; ?>
+								<?php foreach($tabelMerek->result_array() as $row): ?>
+									<tr>
+										<td class="text-center"><?= $no++; ?></td>
+										<td><?= sanitasi($row['merk']); ?></td>
+										<td class="text-center">
+											<button class="btn btn-primary btn-small" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fas fa-edit"></i></button>
+											<button class="btn btn-danger btn-small" data-toggle="tooltip" data-placement="top" title="Hapus"><i class="fas fa-trash"></i></button>
 
+										</td>
+
+									</tr>
+
+								<?php endforeach; ?>
 								</tbody>
 							</table>
 						</div>

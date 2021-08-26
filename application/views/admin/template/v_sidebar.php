@@ -28,7 +28,7 @@ defined('BASEPATH') or exit('No direct script access allowed');?>
 				<!-- Add icons to the links using the .nav-icon class
 					 with font-awesome or any other icon font library -->
 				<li class="nav-item has-treeview">
-					<a href="<?= base_url('index.php/admin/dashboard'); ?>" class="nav-link <?= ($menu == 'dashboard')?"active":""; ?>">
+					<a href="<?= base_url('admin/dashboard'); ?>" class="nav-link <?= ($menu == 'dashboard')?"active":""; ?>">
 						<i class="nav-icon fas fa-tachometer-alt"></i>
 						<p>
 							Dashboard
@@ -36,7 +36,7 @@ defined('BASEPATH') or exit('No direct script access allowed');?>
 					</a>
 				</li>
 				<li class="nav-item">
-					<a href="<?= base_url('index.php/admin/produk'); ?>" class="nav-link <?= ($menu == 'produk')?"active":""; ?>">
+					<a href="<?= base_url('admin/produk'); ?>" class="nav-link <?= ($menu == 'produk')?"active":""; ?>">
 						<i class="nav-icon fas fa-th"></i>
 						<p>
 							Produk
@@ -44,7 +44,7 @@ defined('BASEPATH') or exit('No direct script access allowed');?>
 					</a>
 				</li>
 				<li class="nav-item">
-					<a href="<?= base_url('index.php/admin/merk'); ?>" class="nav-link <?= ($menu == 'merk')?"active":""; ?>">
+					<a href="<?= base_url('admin/merk'); ?>" class="nav-link <?= ($menu == 'merk')?"active":""; ?>">
 						<i class="nav-icon fas fa-copyright"></i>
 						<p>
 							Merk
@@ -52,7 +52,7 @@ defined('BASEPATH') or exit('No direct script access allowed');?>
 					</a>
 				</li>
 				<li class="nav-item">
-					<a href="<?= base_url('index.php/admin/jenis'); ?>" class="nav-link <?= ($menu == 'jenis')?"active":""; ?>">
+					<a href="<?= base_url('admin/jenis'); ?>" class="nav-link <?= ($menu == 'jenis')?"active":""; ?>">
 						<i class="nav-icon fas fa-clipboard"></i>
 						<p>
 							Kategori
@@ -60,7 +60,7 @@ defined('BASEPATH') or exit('No direct script access allowed');?>
 					</a>
 				</li>
 				<li class="nav-item">
-					<a href="<?= base_url('index.php/admin/size'); ?>" class="nav-link <?= ($menu == 'size')?"active":""; ?>">
+					<a href="<?= base_url('admin/size'); ?>" class="nav-link <?= ($menu == 'size')?"active":""; ?>">
 						<i class="nav-icon fas fa-window-maximize"></i>
 						<p>
 							size
@@ -68,7 +68,7 @@ defined('BASEPATH') or exit('No direct script access allowed');?>
 					</a>
 				</li>
 				<li class="nav-item">
-					<a href="<?= base_url('index.php/admin/setting'); ?>" class="nav-link <?= ($menu == 'tentang kami')?"active":""; ?>">
+					<a href="<?= base_url('admin/setting'); ?>" class="nav-link <?= ($menu == 'tentang kami')?"active":""; ?>">
 						<i class="fas fa-address-card"></i>
 						<p>
 							Tentang Kami

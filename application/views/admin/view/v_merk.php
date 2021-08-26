@@ -28,9 +28,14 @@ defined('BASEPATH') or exit('No direct script access allowed');
 <script src="<?= base_url('vendor/almasaeed2010/adminlte') ?>/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
 <script>
 	$(function () {
-		$("#tableSiswa").DataTable({
+		$("#tableMerek").DataTable({
 			"responsive": true,
-			"autoWidth": false,
+			"columns": [
+				{ "width": "10%" },
+				null,
+				{ "width": "15%" },
+			]
+
 		});
 	});
 

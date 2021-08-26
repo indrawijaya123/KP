@@ -5,9 +5,7 @@ class Merk extends CI_Controller
 {
 
 	public $form_validation;
-	public $input;
-	public $session;
-	public $rest;
+	public $merek;
 	protected $title = "Merk";
 	protected $menu = 'merk';
 	protected $subMenu = null;
@@ -16,6 +14,7 @@ class Merk extends CI_Controller
 	public function __construct()
 	{
 		parent::__construct();
+		$this->load->model('M_merek', 'merek');
 //		if (!$this->session->userdata('is_login_admin')) {
 //			redirect('Login');
 //		}
@@ -31,6 +30,7 @@ class Merk extends CI_Controller
 		$data['title'] = $this->title;
 		$data['menu'] = $this->menu;
 		$data['subMenu'] = $this->subMenu;
+		$data['tabelMerek'] = $this->merek->get_data_merek();
 		$view ='v_merk';
 		$this->_layout($data,$view);
 	}
