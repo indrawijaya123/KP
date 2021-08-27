@@ -83,7 +83,7 @@ class Merk extends CI_Controller
 			'Nama Merek',
 			'trim|max_length[15]|required',
 			[
-				'required' => 'Anda harus memilih provinsi terlebih dahulu!',
+				'required' => 'Anda harus mengisi merk terlebih dahulu!',
 				'max_length' => 'Panjang karakter maksimal 15 karakter',
 			]
 		);

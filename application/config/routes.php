@@ -55,7 +55,11 @@ $route['translate_uri_dashes'] = FALSE;
 
 $route['admin/dashboard'] = 'Member/index';
 
+$route['admin/stok/add'] = 'Stok/add';
+$route['admin/stok/edit/(:num)'] = 'Stok/edit/$1';
+$route['admin/stok/hapus/(:num)'] = 'Stok/hapus/$1';
 $route['admin/produk'] = 'Produk/index';
+
 $route['admin/setting'] = 'Setting/index';
 
 $route['admin/jenis/add'] = 'Jenis/add';

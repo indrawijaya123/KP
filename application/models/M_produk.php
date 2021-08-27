@@ -20,25 +20,24 @@ class M_produk extends CI_Model
 			$this->db->where("$this->produk.id", $id);
 		}
 		$this->db->join($this->kategori, "$this->kategori.id = $this->produk.id_kategori");
-
-		return $this->db->get($this->produk);
-	}
-	public function get_data_merk($id=null)
-	{
-		if($id != null){
-			$this->db->where("$this->produk.id", $id);
-		}
 		$this->db->join($this->merk, "$this->merk.id = $this->produk.id_merk");
-
+		$this->db->join($this->size, "$this->size.id = $this->produk.id_size");
 		return $this->db->get($this->produk);
 	}
-	public function get_data_size($id=null)
+	public function simpan_data_produk($data)
 	{
-		if($id != null){
-			$this->db->where("$this->produk.id", $id);
-		}
-		$this->db->join($this->size, "$this->size.id = $this->produk.id_size");
+		$this->db->insert($this->produk,$data);
+	}
 
-		return $this->db->get($this->produk);
+	public function perbaharui_data_produk($data,$idx)
+	{
+		$this->db->where("$this->produk.id",$idx);
+		$this->db->update($this->produk,$data);
+	}
+
+	public function hapus_produk($id)
+	{
+		$this->db->where("$this->produk.id", $id);
+		$this->db->delete($this->produk);
 	}
 }
