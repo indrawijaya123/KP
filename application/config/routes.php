@@ -63,6 +63,9 @@ $route['admin/jenis/edit/(:num)'] = 'Jenis/edit/$1';
 $route['admin/jenis/hapus/(:num)'] = 'Jenis/hapus/$1';
 $route['admin/jenis'] = 'Jenis/index';
 
+$route['admin/size/add'] = 'Size/add';
+$route['admin/size/edit/(:num)'] = 'Size/edit/$1';
+$route['admin/size/hapus/(:num)'] = 'Size/hapus/$1';
 $route['admin/size'] = 'Size/index';
 /** Route merek */
 $route['admin/merk/add'] = 'Merk/add';

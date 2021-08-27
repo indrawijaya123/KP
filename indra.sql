@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 21, 2021 at 07:37 AM
+-- Generation Time: Aug 27, 2021 at 04:54 AM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.3.9
 
@@ -62,8 +62,8 @@ INSERT INTO `kategori` (`id`, `jenis`) VALUES
 (1, 'speaker wireless'),
 (2, 'speaker aktif'),
 (3, 'TV'),
-(4, 'mesin cuci'),
-(5, 'mic');
+(8, 'Mesin cuci'),
+(9, 'MIC');
 
 -- --------------------------------------------------------
 
@@ -103,7 +103,7 @@ INSERT INTO `merk` (`id`, `merk`) VALUES
 
 CREATE TABLE `produk` (
   `id` int(3) NOT NULL,
-  `id_produk` int(3) NOT NULL,
+  `id_kategori` int(3) NOT NULL,
   `id_merk` int(3) NOT NULL,
   `id_size` int(3) NOT NULL,
   `kode_produk` varchar(10) NOT NULL,
@@ -116,7 +116,7 @@ CREATE TABLE `produk` (
 -- Dumping data for table `produk`
 --
 
-INSERT INTO `produk` (`id`, `id_produk`, `id_merk`, `id_size`, `kode_produk`, `nama_produk`, `harga`, `jumlah_stok`) VALUES
+INSERT INTO `produk` (`id`, `id_kategori`, `id_merk`, `id_size`, `kode_produk`, `nama_produk`, `harga`, `jumlah_stok`) VALUES
 (1, 1, 1, 1, 'brg-001', 'venus', 1000000, 54),
 (2, 1, 2, 1, 'brg-035', '899', 1050000, 26),
 (3, 1, 1, 1, 'brg-016', 'pandora', 1200000, 34),
@@ -146,18 +146,7 @@ INSERT INTO `produk` (`id`, `id_produk`, `id_merk`, `id_size`, `kode_produk`, `n
 (27, 3, 6, 8, 'brg-039', '24D123', 1700000, 14),
 (28, 3, 7, 9, 'brg-038', '24LE1701', 1500000, 12),
 (29, 3, 8, 10, 'brg-037', '32D1852', 2100000, 17),
-(30, 3, 7, 10, 'brg-036', 'C32BA11', 2000000, 19),
-(31, 4, 9, 11, 'brg-041', 'QW781XT', 1300000, 12),
-(32, 4, 9, 12, 'brg-034', '851XT', 1400000, 12),
-(33, 4, 6, 11, 'brg-033', '7363', 1300000, 18),
-(34, 4, 6, 12, 'brg-032', '8363', 1500000, 17),
-(35, 4, 13, 13, 'brg-026', '65MW', 1350000, 12),
-(36, 5, 10, 14, 'brg-027', '260', 225000, 73),
-(37, 5, 10, 14, 'brg-028', '270', 300000, 101),
-(38, 5, 11, 14, 'brg-029', 'beta58', 200000, 25),
-(39, 5, 11, 14, 'brg-030', 'JK813', 150000, 20),
-(40, 5, 12, 14, 'brg-031', 'DM1300', 75000, 36),
-(41, 5, 2, 14, 'brg-015', 'SN909', 225000, 56);
+(30, 3, 7, 10, 'brg-036', 'C32BA11', 2000000, 19);
 
 -- --------------------------------------------------------
 
@@ -188,7 +177,7 @@ INSERT INTO `size` (`id`, `size`) VALUES
 (11, '2 tabung 7 kg'),
 (12, '2 tabung 8 kg'),
 (13, '2 tabung 6 kg'),
-(14, '-');
+(14, 'reguler');
 
 --
 -- Indexes for dumped tables
@@ -217,10 +206,10 @@ ALTER TABLE `merk`
 --
 ALTER TABLE `produk`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `id_produk` (`id_produk`),
+  ADD KEY `id_produk` (`id_kategori`),
   ADD KEY `id_merk` (`id_merk`),
   ADD KEY `id_size` (`id_size`),
-  ADD KEY `id_produk_2` (`id_produk`);
+  ADD KEY `id_produk_2` (`id_kategori`);
 
 --
 -- Indexes for table `size`
@@ -236,13 +225,13 @@ ALTER TABLE `size`
 -- AUTO_INCREMENT for table `kategori`
 --
 ALTER TABLE `kategori`
-  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `merk`
 --
 ALTER TABLE `merk`
-  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `produk`
@@ -254,7 +243,7 @@ ALTER TABLE `produk`
 -- AUTO_INCREMENT for table `size`
 --
 ALTER TABLE `size`
-  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- Constraints for dumped tables
@@ -264,9 +253,9 @@ ALTER TABLE `size`
 -- Constraints for table `produk`
 --
 ALTER TABLE `produk`
-  ADD CONSTRAINT `produk_ibfk_1` FOREIGN KEY (`id_merk`) REFERENCES `merk` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `produk_ibfk_2` FOREIGN KEY (`id_size`) REFERENCES `size` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `produk_ibfk_3` FOREIGN KEY (`id_produk`) REFERENCES `kategori` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `produk_ibfk_1` FOREIGN KEY (`id_merk`) REFERENCES `merk` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION,
+  ADD CONSTRAINT `produk_ibfk_2` FOREIGN KEY (`id_size`) REFERENCES `size` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION,
+  ADD CONSTRAINT `produk_ibfk_3` FOREIGN KEY (`id_kategori`) REFERENCES `kategori` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

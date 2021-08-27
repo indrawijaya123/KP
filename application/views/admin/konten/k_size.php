@@ -8,7 +8,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 		<div class="container-fluid">
 			<div class="row mb-2">
 				<div class="col-sm-6">
-					<h1>Daftar Produk</h1>
+					<h1>Daftar Size</h1>
 				</div>
 				<div class="col-sm-6">
 					<ol class="breadcrumb float-sm-right">
@@ -39,7 +39,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
 				<div class="col-md-12">
 					<div class="card card-dark">
 						<div class="card-header">
-							<h3 class="card-title">Daftar Produk</h3>
+							<h3 class="card-title">Daftar size</h3>
+							<a href="<?= base_url('admin/size/add'); ?>"><button class="btn btn-primary btn-sm float-right"><i class="fas fa-plus"></i> &nbsp;Tambah</button></a>
 						</div>
 						<!-- /.card-header -->
 						<div class="card-body">
@@ -52,7 +53,19 @@ defined('BASEPATH') or exit('No direct script access allowed');
 								</tr>
 								</thead>
 								<tbody>
-
+								<?php $no=1 ; ?>
+								<?php foreach($tabelSize->result_array() as $row): ?>
+									<tr>
+										<td class="text-center"><?= $no++; ?></td>
+										<td><?= sanitasi($row['size']); ?></td>
+										<td class="text-center">
+											<a href="<?= base_url('admin/size/edit/'.sanitasi($row['id'])); ?>"><button class="btn btn-primary btn-small" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fas fa-edit"></i></button></a>
+											<span id="tombolHapus" data-toggle="modal" data-target="#modalHapus" data-id="<?= sanitasi($row['id']); ?>">
+												<button class="btn btn-danger btn-small" data-toggle="tooltip" data-placement="top" title="Hapus"><i class="fas fa-trash"></i></button>
+											</span>
+										</td>
+									</tr>
+								<?php endforeach; ?>
 								</tbody>
 							</table>
 						</div>
@@ -65,7 +78,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 </div>
 <!-- /.content-wrapper -->
 <!--	Modal Kunci Pesan	-->
-<div class="modal fade" id="modalKunci" tabindex="-1" aria-labelledby="modalHapusLabel" aria-hidden="true">
+<div class="modal fade" id="modalHapus" tabindex="-1" aria-labelledby="modalHapusLabel" aria-hidden="true">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -76,7 +89,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-default" data-dismiss="modal">Batal</button>
-				<a href="" id="urlKunci"><button  type="button" class="btn btn-danger">Hapus</button></a>
+				<a href="" id="urlHapus"><button  type="button" class="btn btn-danger">Hapus</button></a>
 			</div>
 		</div>
 	</div>

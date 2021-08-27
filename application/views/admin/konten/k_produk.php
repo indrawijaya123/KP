@@ -50,10 +50,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
 									<th class="text-center">Kode Produk</th>
 									<th class="text-center">Kategori</th>
 									<th class="text-center">Merk</th>
+									<th class="text-center">Type</th>
 									<th class="text-center">Size</th>
 									<th class="text-center">Harga</th>
 									<th class="text-center">Stok</th>
-									<th class="text-center" width="10%">Action</th>
+									<th class="text-center" width="15%">Action</th>
 								</tr>
 								</thead>
 								<tbody>
@@ -63,9 +64,10 @@ defined('BASEPATH') or exit('No direct script access allowed');
 										<td class="text-center"><?= $no++; ?></td>
 										<td><?= sanitasi($row['kode_produk']); ?></td>
 										<td><?= sanitasi($row['jenis']); ?></td>
-										<td></td>
-										<td></td>
-										<td></td>
+										<td><?= sanitasi($row['merk']); ?></td>
+										<td><?= sanitasi($row['nama_produk']); ?></td>
+										<td><?= sanitasi($row['size']); ?></td>
+										<td><?= sanitasi($row['harga']); ?></td>
 										<td></td>
 										<td class="text-center">
 											<a href="<?= base_url('admin/merk/edit/'.sanitasi($row['id'])); ?>"><button class="btn btn-primary btn-small" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fas fa-edit"></i></button></a>
