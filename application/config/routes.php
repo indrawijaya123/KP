@@ -55,9 +55,9 @@ $route['translate_uri_dashes'] = FALSE;
 
 $route['admin/dashboard'] = 'Member/index';
 
-$route['admin/stok/add'] = 'Stok/add';
-$route['admin/stok/edit/(:num)'] = 'Stok/edit/$1';
-$route['admin/stok/hapus/(:num)'] = 'Stok/hapus/$1';
+$route['admin/stok/add'] = 'Produk/add';
+$route['admin/stok/edit/(:num)'] = 'Produk/edit/$1';
+$route['admin/stok/hapus/(:num)'] = 'Produk/hapus/$1';
 $route['admin/produk'] = 'Produk/index';
 
 $route['admin/setting'] = 'Setting/index';
@@ -76,3 +76,5 @@ $route['admin/merk/add'] = 'Merk/add';
 $route['admin/merk/edit/(:num)'] = 'Merk/edit/$1';
 $route['admin/merk/hapus/(:num)'] = 'Merk/hapus/$1';
 $route['admin/merk'] = 'Merk/index';
+
+$route['admin/setting'] = 'Setting/index';

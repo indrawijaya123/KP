@@ -75,6 +75,14 @@ defined('BASEPATH') or exit('No direct script access allowed');?>
 						</p>
 					</a>
 				</li>
+				<li class="nav-item">
+					<a href="<?= base_url('admin/setting'); ?>" class="nav-link <?= ($menu == 'form setting')?"active":""; ?>">
+						<i class="nav-icon fas fa-wrench-simple">
+						<p>
+							Setting
+						</p>
+					</a>
+				</li>
 			</ul>
 		</nav>
 		<!-- /.sidebar-menu -->

@@ -1,5 +1,5 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
 class Produk extends CI_Controller
 {
@@ -36,29 +36,31 @@ class Produk extends CI_Controller
 		$view = 'v_produk';
 		$this->_layout($data, $view);
 	}
-	public function hapus($id=null)
+
+	public function hapus($id = null)
 	{
 		//periksa apakah id stok terdaftar
-		$getData = $this->stok->get_data_stok($id);
+		$getData = $this->produk->get_data_produk($id);
 		if ($getData->num_rows() != 0) {
-			$this->stok->hapus_stok($id);
+			$this->produk->hapus_produk($id);
 			$this->session->set_flashdata('pesan2', '<div class="alert alert-danger" role="alert">Data stok berhasil dihapus!</div>');
 			redirect('admin/stok');
 		} else {
 			redirect('admin/stok');
 		}
 	}
-	public function edit($id=null)
+
+	public function edit($id = null)
 	{
-		$getdata=$this->stok->get_data_stok($id);
-		if($getdata->num_rows() != 0){
+		$getdata = $this->produk->get_data_produk($id);
+		if ($getdata->num_rows() != 0) {
 			$this->form_validation->set_rules(
-				'namaStok',
-				'Nama Stok',
-				'trim|max_length[11]|required',
+				'jumlahStok',
+				'jumlah stok',
+				'trim|numeric|required',
 				[
 					'required' => 'Anda harus mengisi jumlah stok terlebih dahulu!',
-					'max_length' => 'Panjang karakter maksimal 11 karakter',
+					'numeric' => 'harus berformat angka',
 				]
 			);
 			$this->form_validation->set_error_delimiters('<span class="text-danger text-sm" >', '</span>');
@@ -69,22 +71,24 @@ class Produk extends CI_Controller
 				$data['dataStok'] = $getdata->row()->jenis;
 				$data['id'] = $id;
 				$data['tag'] = 'edit';
-				$view = 'v_formproduk';
+				$data['jumlahstok'] = $getdata->row()->stok;
+				$view = 'v_formstok';
 				$this->_layout($data, $view);
-			}else{
-				$namaStok = $this->input->post('namaStok', TRUE);
+			} else {
+				$jumlahStok = $this->input->post('jumlahStok', TRUE);
 				$dataStok = [
-					'stok' => $namaStok,
+					'stok' => $jumlahStok,
 				];
 				//perbaharui data stok
-				$this->stok->perbaharui_data_stok($dataStok,$id);
+				$this->produk->perbaharui_data_produk($dataStok, $id);
 				$this->session->set_flashdata('pesan1', '<div class="alert alert-success" role="alert">Data berhasil diperbaharui!</div>');
-				redirect('admin/stok/edit/'.$id);
+				redirect('admin/stok/edit/' . $id);
 			}
-		}else{
+		} else {
 			redirect('admin/stok');
 		}
 	}
+
 	public function add()
 	{
 		$this->form_validation->set_rules(
@@ -105,7 +109,7 @@ class Produk extends CI_Controller
 			$data['tag'] = 'add';
 			$view = 'v_formproduk';
 			$this->_layout($data, $view);
-		}else{
+		} else {
 			$namaStok = $this->input->post('namaStok', TRUE);
 			$dataStok = [
 				'stok' => $namaStok,

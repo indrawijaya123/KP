@@ -35,7 +35,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
 				null,
 				{ "width": "15%" },
 			]
-
 		});
 	});
 

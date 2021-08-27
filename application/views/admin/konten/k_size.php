@@ -49,7 +49,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 								<tr>
 									<th class="text-center">No</th>
 									<th class="text-center">Size</th>
-									<th class="text-center" width="10%">Action</th>
+									<th class="text-center" width="15%">Action</th>
 								</tr>
 								</thead>
 								<tbody>

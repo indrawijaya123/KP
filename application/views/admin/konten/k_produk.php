@@ -71,8 +71,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
 										<td><?= sanitasi($row['harga']); ?></td>
 										<td><?= sanitasi($row['stok']); ?></td>
 										<td class="text-center">
-											<a href="<?= base_url('admin/stok/edit/'.sanitasi($row['stok'])); ?>"><button class="btn btn-primary btn-small" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fas fa-edit"></i></button></a>
-											<span id="tombolHapus" data-toggle="modal" data-target="#modalHapus" data-id="<?= sanitasi($row['stok']); ?>">
+											<a href="<?= base_url('admin/stok/edit/'.sanitasi($row['id'])); ?>"><button class="btn btn-primary btn-small" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fas fa-edit"></i></button></a>
+											<span id="tombolHapus" data-toggle="modal" data-target="#modalHapus" data-id="<?= sanitasi($row['id']); ?>">
 												<button class="btn btn-danger btn-small" data-toggle="tooltip" data-placement="top" title="Hapus"><i class="fas fa-trash"></i></button>
 											</span>
 										</td>
