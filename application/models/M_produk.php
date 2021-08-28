@@ -22,6 +22,7 @@ class M_produk extends CI_Model
 		$this->db->join($this->kategori, "$this->kategori.id = $this->produk.id_kategori");
 		$this->db->join($this->merk, "$this->merk.id = $this->produk.id_merk");
 		$this->db->join($this->size, "$this->size.id = $this->produk.id_size");
+		$this->db->order_by("$this->produk.id","DESC");
 		return $this->db->get($this->produk);
 	}
 	public function simpan_data_produk($data)

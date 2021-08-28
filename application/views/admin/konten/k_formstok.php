@@ -48,13 +48,18 @@ defined('BASEPATH') or exit('No direct script access allowed');
 								<form action="<?= base_url('admin/stok/edit/'.sanitasi($id))?>" method="post">
 									<?php } ?>
 									<div class="form-group">
+										<label for="harga">Harga Produk <span class="text-danger">*</span></label>
+										<input type="number" name="harga" id="harga" value="<?= set_value('harga', sanitasi($harga))?>" maxlength="11" class="form-control <?= (form_error('harga') != null)? 'is-invalid':''; ?>" placeholder="0" required/>
+										<?= form_error('harga'); ?>
+									</div>
+									<div class="form-group">
 										<label for="jumlahStok">jumlah Stok <span class="text-danger">*</span></label>
-										<input type="number" name="jumlahStok" id="jumlahStok" value="<?= set_value('jumlahStok', sanitasi($jumlahstok))?>" maxlength="11" class="form-control <?= (form_error('jumlahStok') != null)? 'is-invalid':''; ?>" placeholder="jumlah stok" required/>
+										<input type="number" name="jumlahStok" id="jumlahStok" value="<?= set_value('jumlahStok', sanitasi($jumlahstok))?>" maxlength="11" class="form-control <?= (form_error('jumlahStok') != null)? 'is-invalid':''; ?>" placeholder="0" required/>
 										<?= form_error('jumlahStok'); ?>
 									</div>
 									<div class="form-group">
 										<button type="submit" class="btn btn-sm btn-primary">Simpan</button>
-										<a href="<?= base_url('admin/stok'); ?>"><button type="button" class="btn btn-sm btn-danger">Cancel</button></a>
+										<a href="<?= base_url('admin/produk'); ?>"><button type="button" class="btn btn-sm btn-danger">Cancel</button></a>
 									</div>
 								</form>
 						</div>

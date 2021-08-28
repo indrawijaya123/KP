@@ -28,10 +28,16 @@ defined('BASEPATH') or exit('No direct script access allowed');
 <script src="<?= base_url('vendor/almasaeed2010/adminlte') ?>/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
 <script>
 	$(function () {
-		$("#tableStok").DataTable({
+		$("#tableProduk").DataTable({
 			"responsive": true,
 			"columns": [
 				{ "width": "10%" },
+				{ "width": "15%" },
+				{ "width": "15%" },
+				{ "width": "15%" },
+				{ "width": "15%" },
+				{ "width": "10%" },
+				null,
 				null,
 				{ "width": "15%" },
 			]

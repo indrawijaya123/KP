@@ -40,11 +40,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
 					<div class="card card-dark">
 						<div class="card-header">
 							<h3 class="card-title">Daftar Produk</h3>
-							<a href="<?= base_url('admin/stok/add'); ?>"><button class="btn btn-primary btn-sm float-right"><i class="fas fa-plus"></i> &nbsp;Tambah</button></a>
+							<a href="<?= base_url('admin/produk/add'); ?>"><button class="btn btn-primary btn-sm float-right"><i class="fas fa-plus"></i> &nbsp;Tambah</button></a>
 						</div>
 						<!-- /.card-header -->
 						<div class="card-body">
-							<table id="tableSiswa" class="table table-bordered table-hover" style="width: 100%">
+							<table id="tableProduk" class="table table-bordered table-hover" style="width: 100%">
 								<thead>
 								<tr>
 									<th class="text-center">No</th>
@@ -69,7 +69,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 										<td><?= sanitasi($row['nama_produk']); ?></td>
 										<td><?= sanitasi($row['size']); ?></td>
 										<td><?= sanitasi($row['harga']); ?></td>
-										<td><?= sanitasi($row['stok']); ?></td>
+										<td><?= sanitasi($row['jumlah_stok']); ?></td>
 										<td class="text-center">
 											<a href="<?= base_url('admin/stok/edit/'.sanitasi($row['id'])); ?>"><button class="btn btn-primary btn-small" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fas fa-edit"></i></button></a>
 											<span id="tombolHapus" data-toggle="modal" data-target="#modalHapus" data-id="<?= sanitasi($row['id']); ?>">
