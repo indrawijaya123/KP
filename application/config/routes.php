@@ -54,7 +54,7 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 $route['admin/dashboard'] = 'Member/index';
-$route['admin/logout'] = 'Logout/index';
+$route['admin/logout'] = 'Member/logout';
 
 /** Route Produk */
 $route['admin/produk/add'] = 'Produk/add';
