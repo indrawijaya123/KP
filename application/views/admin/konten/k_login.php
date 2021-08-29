@@ -2,7 +2,7 @@
 defined('BASEPATH') or exit('No direct script access allowed');?>
 <div class="login-box">
 	<div class="login-logo">
-		<img src="<?= base_url('gambar/logo.png'); ?>" alt="logo indrastore" width="50%"><br>
+		<img src="<?= base_url('gambar/logo.png'); ?>" alt="logo" width="50%"><br>
 	</div>
 	<!-- /.login-logo -->
 	<div class="card">
