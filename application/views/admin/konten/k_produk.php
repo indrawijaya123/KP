@@ -90,7 +90,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 </div>
 <!-- /.content-wrapper -->
 <!--	Modal Kunci Pesan	-->
-<div class="modal fade" id="modalKunci" tabindex="-1" aria-labelledby="modalHapusLabel" aria-hidden="true">
+<div class="modal fade" id="modalHapus" tabindex="-1" aria-labelledby="modalHapusLabel" aria-hidden="true">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -101,7 +101,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-default" data-dismiss="modal">Batal</button>
-				<a href="" id="urlKunci"><button  type="button" class="btn btn-danger">Hapus</button></a>
+				<a href="" id="urlHapus"><button  type="button" class="btn btn-danger">Hapus</button></a>
 			</div>
 		</div>
 	</div>

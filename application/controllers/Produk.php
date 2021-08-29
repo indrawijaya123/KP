@@ -45,6 +45,7 @@ class Produk extends CI_Controller
 	public function hapus($id = null)
 	{
 		//periksa apakah id stok terdaftar
+
 		$getData = $this->produk->get_data_produk($id);
 		if ($getData->num_rows() != 0) {
 			$this->produk->hapus_produk($id);

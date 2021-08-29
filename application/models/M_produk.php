@@ -19,6 +19,7 @@ class M_produk extends CI_Model
 		if($id != null){
 			$this->db->where("$this->produk.id", $id);
 		}
+		$this->db->select("$this->produk.id,$this->produk.kode_produk,$this->produk.nama_produk,$this->produk.harga,$this->produk.jumlah_stok,$this->size.size,$this->merk.merk,$this->kategori.jenis");
 		$this->db->join($this->kategori, "$this->kategori.id = $this->produk.id_kategori");
 		$this->db->join($this->merk, "$this->merk.id = $this->produk.id_merk");
 		$this->db->join($this->size, "$this->size.id = $this->produk.id_size");
