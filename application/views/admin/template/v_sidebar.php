@@ -68,14 +68,21 @@ defined('BASEPATH') or exit('No direct script access allowed');?>
 					</a>
 				</li>
 				<li class="nav-item">
-					<a href="<?= base_url('admin/setting'); ?>" class="nav-link <?= ($menu == 'tentang kami')?"active":""; ?>">
-						<i class="fas fa-address-card"></i>
+					<a href="<?= base_url('admin/about'); ?>" class="nav-link <?= ($menu == 'about')?"active":""; ?>">
+						<i class="nav-icon fas fa-address-card"></i>
 						<p>
 							Tentang Kami
 						</p>
 					</a>
 				</li>
-
+				<li class="nav-item">
+					<a href="<?= base_url('admin/setting'); ?>" class="nav-link <?= ($menu == 'setting')?"active":""; ?>">
+						<i class="nav-icon fas fa-cog"></i>
+						<p>
+							Setting
+						</p>
+					</a>
+				</li>
 			</ul>
 		</nav>
 		<!-- /.sidebar-menu -->

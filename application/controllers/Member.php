@@ -16,9 +16,9 @@ class Member extends CI_Controller
 	public function __construct()
 	{
 		parent::__construct();
-//		if (!$this->session->userdata('is_login_admin')) {
-//			redirect('Login');
-//		}
+		if (!$this->session->userdata('is_login_admin')) {
+			redirect('Login');
+		}
 	}
 
 	private function _layout($data, $view)
@@ -37,6 +37,7 @@ class Member extends CI_Controller
 
 	public function logout()
 	{
-		echo "logout";
+		$this->session->sess_destroy();
+		redirect('Login');
 	}
 }

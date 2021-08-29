@@ -17,9 +17,9 @@ class Size extends CI_Controller
 	{
 		parent::__construct();
 		$this->load->model('M_size', 'size');
-//		if (!$this->session->userdata('is_login_admin')) {
-//			redirect('Login');
-//		}
+		if (!$this->session->userdata('is_login_admin')) {
+			redirect('Login');
+		}
 	}
 
 	private function _layout($data, $view)
